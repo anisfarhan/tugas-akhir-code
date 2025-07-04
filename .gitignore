@@ -1,0 +1,18 @@
+# Java
+*.class
+
+# Rust
+target/
+*.exe
+*.pdb
+guessing_game/
+hello_cargo/
+hello_world/
+variables/
+
+# Python
+__pycache__/
+*.pyc
+
+# PHP
+*.log
