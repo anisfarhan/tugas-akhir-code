@@ -13,11 +13,11 @@ fn bubble_sort(arr: &mut [i32]) {
 
 fn main() {
     let mut input = String::new();
-    println!("Enter the number of elements: ");
+    // println!("Enter the number of elements: ");
     io::stdin().read_line(&mut input).unwrap();
     let n: usize = input.trim().parse().unwrap();
 
-    println!("Enter the elements: ");
+    // println!("Enter the elements: ");
     let mut arr = Vec::with_capacity(n);
     input.clear();
     io::stdin().read_line(&mut input).unwrap();
@@ -27,7 +27,7 @@ fn main() {
 
     bubble_sort(&mut arr);
 
-    println!("Sorted array: ");
+    // println!("Sorted array: ");
     for num in arr {
         print!("{} ", num);
     }

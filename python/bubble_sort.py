@@ -6,12 +6,14 @@ def bubble_sort(arr):
                 arr[j], arr[j+1] = arr[j+1], arr[j]
 
 def main():
-    int(input("Enter the number of elements: "))
-    arr = list(map(int, input("Enter the elements: ").split()))
+    # int(input("Enter the number of elements: "))
+    int(input())
+    # arr = list(map(int, input("Enter the elements: ").split()))
+    arr = list(map(int, input().split()))
 
     bubble_sort(arr)
 
-    print("Sorted array: ")
+    # print("Sorted array: ")
     print(*arr)
 
 if __name__ == "__main__":

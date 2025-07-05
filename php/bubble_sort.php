@@ -12,16 +12,16 @@ function bubbleSort(&$arr) {
     }
 }
 
-echo "Enter the number of elements: ";
+// echo "Enter the number of elements: ";
 $n = intval(trim(fgets(STDIN)));
 
-echo "Enter the elements (space separated): ";
+// echo "Enter the elements (space separated): ";
 $line = trim(fgets(STDIN));
 $arr = array_map('intval', explode(' ', $line));
 
 bubbleSort($arr);
 
-echo "Sorted array: ";
+// echo "Sorted array: ";
 foreach ($arr as $num) {
     echo $num . " ";
 }
