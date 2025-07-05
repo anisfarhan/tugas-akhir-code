@@ -7,8 +7,8 @@ nltk.download('words')
 # Get the list of English words
 word_list = words.words()
 
-# Filter words that match the "-OLD-" pattern
-pattern_words = [word.upper() for word in word_list if len(word) == 5 and word[1] == 'o' and word[2] == 'l' and word[3] == 'd']
+# Filter words that match the "-ALER" pattern
+pattern_words = [word.upper() for word in word_list if len(word) == 5 and word[-4:] == "aler"]
 
 # Show first 20 matches for preview
 # pattern_words = pattern_words[:20]

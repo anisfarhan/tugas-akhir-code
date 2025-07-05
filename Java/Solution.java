@@ -1,20 +1,21 @@
 class Solution {
-    public char kthCharacter(long k, int[] operations) {
-        int ans = 0;
-        int t;
+    public int findLucky(int[] arr) {
+        if (arr.length == 0) {
+            return -1;
+        }
+        
+        int[] count = new int[501];
 
-        while (k != 1) {
-            t = 63 - Long.numberOfLeadingZeros(k);
-            if((1L << t) == k) {
-                t--;
-            }
+        for (int num : arr) {
+            count[num]++;
+        }
 
-            k = k - (1L << t);
-            if (operations[t] != 0) {
-                ans++;
+        for (int i = 500; i >= 1; i--) {
+            if (count[i] == i) {
+                return i;
             }
         }
 
-        return (char) ('a' + (ans % 26));
+        return -1;
     }
 }
