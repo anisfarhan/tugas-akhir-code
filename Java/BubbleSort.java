@@ -19,9 +19,9 @@ public class BubbleSort {
     
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the number of elements: ");
+        // System.out.println("Enter the number of elements: ");
         int n = sc.nextInt();
-        System.out.println("Enter the elements: ");
+        // System.out.println("Enter the elements: ");
         int[] arr = new int[n];
 
         for (int i = 0; i < n; i++) {
@@ -30,7 +30,7 @@ public class BubbleSort {
 
         bubbleSort(arr);
 
-        System.out.println("Sorted array: ");
+        // System.out.println("Sorted array: ");
         for (int i = 0; i < n; i++) {
             System.out.print(arr[i] + " ");
         }
