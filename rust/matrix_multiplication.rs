@@ -27,7 +27,7 @@ fn read_matrix(rows: usize, cols: usize) -> Vec<Vec<i32>> {
     let mut input = String::new();
     for i in 0..rows {
         input.clear();
-        println!("Enter row {} ({} integers separated by space):", i + 1, cols);
+        // println!("Enter row {} ({} integers separated by space):", i + 1, cols);
         io::stdin().read_line(&mut input).unwrap();
         let nums: Vec<i32> = input
             .trim()
@@ -44,14 +44,14 @@ fn read_matrix(rows: usize, cols: usize) -> Vec<Vec<i32>> {
 fn main() {
     let mut input = String::new();
 
-    println!("Enter the number of rows and columns of the first matrix: ");
+    // println!("Enter the number of rows and columns of the first matrix: ");
     io::stdin().read_line(&mut input).unwrap();
     let dims: Vec<usize> = input.trim().split_whitespace().map(|x| x.parse().unwrap()).collect();
     let (r1, c1) = (dims[0], dims[1]);
     let matrix1 = read_matrix(r1, c1);
 
     input.clear();
-    println!("Enter the number of rows and columns of the second matrix: ");
+    // println!("Enter the number of rows and columns of the second matrix: ");
     io::stdin().read_line(&mut input).unwrap();
     let dims: Vec<usize> = input.trim().split_whitespace().map(|x| x.parse().unwrap()).collect();
     let (r2, c2) = (dims[0], dims[1]);

@@ -24,7 +24,7 @@ function multiplyMatrices($matrix1, $matrix2) {
 function readMatrix($rows, $cols) {
     $matrix = [];
     for ($i = 0; $i < $rows; $i++) {
-        echo "Enter row " . ($i + 1) . " (space separated): ";
+        // echo "Enter row " . ($i + 1) . " (space separated): ";
         $line = trim(fgets(STDIN));
         $row = array_map('intval', explode(' ', $line));
         if (count($row) != $cols) {
@@ -36,20 +36,20 @@ function readMatrix($rows, $cols) {
     return $matrix;
 }
 
-echo "Enter the number of rows and columns of the first matrix: ";
+// echo "Enter the number of rows and columns of the first matrix: ";
 list($r1, $c1) = array_map('intval', explode(' ', trim(fgets(STDIN))));
-echo "Enter the first matrix:\n";
+// echo "Enter the first matrix:\n";
 $matrix1 = readMatrix($r1, $c1);
 
-echo "Enter the number of rows and columns of the second matrix: ";
+// echo "Enter the number of rows and columns of the second matrix: ";
 list($r2, $c2) = array_map('intval', explode(' ', trim(fgets(STDIN))));
-echo "Enter the second matrix:\n";
+// echo "Enter the second matrix:\n";
 $matrix2 = readMatrix($r2, $c2);
 
 $result = multiplyMatrices($matrix1, $matrix2);
 
 if ($result !== null) {
-    echo "The product of the two matrices is:\n";
+    // echo "The product of the two matrices is:\n";
     for ($i = 0; $i < count($result); $i++) {
         for ($j = 0; $j < count($result[0]); $j++) {
             echo $result[$i][$j] . " ";

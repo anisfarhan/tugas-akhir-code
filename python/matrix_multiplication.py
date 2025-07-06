@@ -15,18 +15,20 @@ def multiply_matrices(matrix1, matrix2):
     return result
 
 def main():
-    r1, c1 = map(int, input("Enter the number of rows and columns of the first matrix: ").split())
-    print("Enter the first matrix:")
+    # r1, c1 = map(int, input("Enter the number of rows and columns of the first matrix: ").split())
+    # print("Enter the first matrix:")
+    r1, c1 = map(int, input().split())
     matrix1 = [list(map(int, input().split())) for _ in range(r1)]
 
-    r2, c2 = map(int, input("Enter the number of rows and columns of the second matrix: ").split())
-    print("Enter the second matrix:")
+    # r2, c2 = map(int, input("Enter the number of rows and columns of the second matrix: ").split())
+    # print("Enter the second matrix:")
+    r2, c2 = map(int, input().split())
     matrix2 = [list(map(int, input().split())) for _ in range(r2)]
 
     result = multiply_matrices(matrix1, matrix2)
 
     if result:
-        print("The product of the two matrices is: ")
+        # print("The product of the two matrices is: ")
         for row in result:
             print(*row)
     else:
